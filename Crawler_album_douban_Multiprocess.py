@@ -31,9 +31,10 @@ def Filter_input(inputlist):
 	return numlist
 
 def getHtmlSoup(url):
+	cookie = '这里是cookie'
 	headers = {
 		'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
-		'Cookie' : 'bid="nSrT7p8EE2w"; gr_user_id=32bfb902-ff98-4ae9-9e0c-140b33b338d7; _ga=GA1.2.1806406022.1440759784; ll="108090"; ps=y; ct=y; cn_d6168da03fa1ahcc4e86_dplus=%7B%22distinct_id%22%3A%20%221539c2fda9c1c4-00d07e40331b6e-123b6e5f-fa000-1539c2fda9d707%22%2C%22%24_sessionid%22%3A%200%2C%22%24_sessionTime%22%3A%201468247199%2C%22%24dp%22%3A%200%2C%22%24_sessionPVTime%22%3A%201468247199%2C%22%24id%22%3A%20%2258175165%22%2C%22%24initial_time%22%3A%20%221460882242%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fmovie.douban.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22movie.douban.com%22%2C%22initial_view_time%22%3A%20%221468242437%22%2C%22initial_referrer%22%3A%20%22https%3A%2F%2Fmovie.douban.com%2Fsubject%2F20505982%2F%3Ffrom%3Dshowing%22%2C%22initial_referrer_domain%22%3A%20%22movie.douban.com%22%7D; ue="bill.zxb@qq.com"; as="https://movie.douban.com/"; ck=gMs4; _pk_ref.100001.8cb4=%5B%22%22%2C%22%22%2C1468807193%2C%22https%3A%2F%2Fmovie.douban.com%2F%22%5D; __utmt=1; dbcl2="148473388:v4QizcqOlaE"; _vwo_uuid_v2=E6A49BB6DF236D4F60261E4F121C7BED|cba1af9a5fa12a42f4ac05fe149679bd; ap=1; push_noty_num=0; push_doumail_num=0; _pk_id.100001.8cb4=d0c4f6d094349915.1466324420.80.1468807314.1468768546.; _pk_ses.100001.8cb4=*; __utma=30149280.1806406022.1440759784.1468766439.1468806370.113; __utmb=30149280.3.10.1468806370; __utmc=30149280; __utmz=30149280.1468293177.90.25.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; __utmv=30149280.14847',
+		'Cookie' : cookie,
 		'Connection' : 'keep-alive'
 	}
 	webdata = requests.get(url, headers = headers)
